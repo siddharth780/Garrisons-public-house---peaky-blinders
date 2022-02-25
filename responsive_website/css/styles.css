@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+    color: white;
+    /* font-family: 'Bangers', cursive; */
+}
+
+header{
+    background-image: url('../images/peakyblinders.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.clearfix::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.logo{
+    height: 200px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 60px;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+}
+
+.main-nav li a{
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid red;
+}
+
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: #fff;
+    font-size: 240%;
+    margin-bottom: 20px;
+    
+    font-weight: lighter;
+}
+h3{
+    
+    color: white;
+    float: right;
+}
+
+.peakyblinders{
+    color: gold;
+    font-weight: 700;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full{
+    background-color: transparent;
+    color: #fff;
+    margin-right: 15px;
+    border: 1px solid #fff;
+}
+
+.btn-full:hover{
+    background-color: red ;
+}
+
+.btn-nav{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-nav:hover{
+    background-color: red;
+}
+
+.colchange{
+    animation: colchange 1s infinite;
+}
+@keyframes colchange{
+    0%{color : white}
+    25%{color: goldenrod;}
+    50%{color: white;}
+    100%{color: goldenrod;}
+}
+
+.peakyblinders:hover{
+    animation: peakyblinders 2s infinite;
+}
+@keyframes peakyblinders{
+    0%{color: yellow;}
+    100%{color: red;}
+}
+
+.mobile-icon{display: none;}
+
+/* ////// RESPONSIVE QUERIES ////// */
+
+@media only screen and (max-width: 1180px){
+    .main-content-header{
+        width: 100%;
+        padding: 0.2%;
+    }
+}
+
+@media only screen and (max-width: 998px){
+    h1{font-size: 200%;}
+}
+
+@media only screen and (max-width: 768px){
+    h1{font-size: 180%;}
+
+    .main-nav{display: none;}
+
+    .mobile-icon{
+        display: inline-block ;
+        color: #fff;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+
+    .main-nav{float: left;}
+
+    .main-nav li{
+        display: block;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .btn-full{
+        margin-bottom: 20px;
+    }
+    h1{font-size: 100%;}
+}
